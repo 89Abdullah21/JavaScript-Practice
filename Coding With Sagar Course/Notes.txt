@@ -1,0 +1,26 @@
+Before JS, the sites were like newspaper. You were able to get and see info but couldn't perform any antion. More like a static site.
+
+JS makes a site interactive, insert logic into the site.
+
+console.log("Hi JavaScript");
+
+JS responds to events/actions
+
+JS Engine: 1)Read Code  2)Execute/Run Code 3)Code into Actions
+Each brower Has its own JS Engine that read, execute and convert code to action
+
+JS is single threaded and synchronous. Read and run line by line
+
+JS runs on Browser, not just on internet
+
+let age=23;
+let b=2;
+console.log(age*b);
+
+
+let a =23;
+a=42;
+
+let name="Abdullah"; const dob="21/4/2004"; var age=22;
+
+let and const are safe to use. var creates BUGS.

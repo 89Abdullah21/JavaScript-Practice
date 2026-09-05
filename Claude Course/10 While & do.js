@@ -1,0 +1,1 @@
+// difference between number(prompt() and parseInt(prompt()) is that number() converts the input to a number, while parseInt() converts the input to an integer.
