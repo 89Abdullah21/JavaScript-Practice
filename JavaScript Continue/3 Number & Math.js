@@ -8,7 +8,7 @@ console.log("Value of pi:", pi);
 // Methods of number
 console.log("Age:", age);
 console.log("Age in string:", age.toString());
-console.log("Age in fixed decimal places:", age.toFixed(2));
+console.log("Age in fixed decimal places:", age.toFixed(2)); 
 
 // Math
 // 1. Math.round(): Round to nearest integer

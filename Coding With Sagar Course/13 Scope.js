@@ -21,4 +21,5 @@ if (true) {
     let blockVar = "I am a block variable";
     console.log(blockVar);
 }
+//console.log(blockVar); // This will result in an error because blockVar is not accessible outside the if block.
 // console.log(blockVar); // This will result in an error because blockVar is not accessible outside the if block.
