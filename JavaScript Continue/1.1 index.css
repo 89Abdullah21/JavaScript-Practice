@@ -3,3 +3,20 @@ h1{
     font-family: "Monaco", sans-serif;
     font-size: 2rem;
 }
+
+.container{
+    display: flex;
+
+}
+
+.box{
+    width: 100px;
+    height: 150px;
+    background-color: orange;
+    border: 2px solid red;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
