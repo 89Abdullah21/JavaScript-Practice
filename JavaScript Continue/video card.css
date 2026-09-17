@@ -1,0 +1,33 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    border: 2px solid black;
+    display: flex;
+    width: 80vw;
+    column-gap: 20px;
+    border-radius: 10px;
+
+}
+
+h1{
+    margin: 0px;
+    font-size: 20px;
+}
+
+p{
+    margin: 10px 0px;
+}
+
+img{
+    
+    border-radius: 10px;
+}
