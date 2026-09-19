@@ -1,0 +1,45 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+.container{
+    background: orange;
+
+}
+
+.main_heading{
+    text-align: center;
+    color: rgb(93, 152, 152);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.card{
+    border: 2px solid black;
+    margin-top:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content{
+    display: flex;
+    /* justify-content: center; */
+    column-gap: 20px;
+    width: 80vw;
+    border: 2px solid black;
+    background-color: aquamarine;
+}
+
+img{
+    width: 200px;
+}
+
+span{
+    font-weight: bold;
+}
+
+p{
+    margin:20px;
+}
