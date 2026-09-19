@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            background-color: #c6c63a;
+            margin-top: 20px;
+        }
+
+        .parent{
+            width: 400px;
+            height: 200px;
+            background-color: #4CAF50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child{
+            width: 300px;
+            height: 100px;
+            background-color: #FF5722;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="hero">
+        <h1>JavaScript Set Interval</h1>
+        <h2>Here are three setinterval taking place</h2>
+        <h3>1. Color Change every 1 second</h3>
+        <h3>2. Border Radius Change every 1 second</h3>
+        <h3>3. Container Border appears after 4 seconds (wait for 4 seconds plz)</h3>
+    </div>
+
+    <section class="container">
+        <div class="parent">
+            <div class="child">Set Interval: Do something every 1 second</div>
+        </div>
+    </section>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
