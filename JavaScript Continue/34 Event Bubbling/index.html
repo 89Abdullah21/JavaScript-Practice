@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+
+    <style>
+        .container, .container2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            background-color: #c6c63a;
+            margin-top: 20px;
+        }
+
+        .parent, .parent2 {
+            width: 400px;
+            height: 200px;
+            background-color: #4CAF50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child, .child2 {
+            width: 300px;
+            height: 100px;
+            background-color: #FF5722;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <section class="container">
+        <div class="parent">
+            <div class="child">Event Bubbling 1</div>
+        </div>
+    </section>
+
+    <section class="container2">
+        <div class="parent2">
+            <div class="child2">Event Bubbling 2</div>
+        </div>
+    </section>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
