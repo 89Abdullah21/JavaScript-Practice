@@ -11,4 +11,5 @@ let boxes= document.querySelector(".boxes").children;
 Array.from(boxes).forEach(e =>{
     e.style.backgroundColor = changeColor();
     e.style.color = changeColor();
+    e.style.borderColor = changeColor();
 })

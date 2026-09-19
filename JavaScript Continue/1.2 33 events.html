@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .container, .container2, .container3, .container4{
+            background:orange;
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+            height: 45vh;
+            row-gap: 20px;
+            /* border: 1px solid black; */
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        #btn, #btn2, #btn3, #btn4{
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>Color Changing Event</h1>
+        <button id="btn">Hover In/Out to Change BG Color</button>
+    </div>
+
+    <div class="container2">
+        <h1>Alert Event</h1>
+        <button id="btn2">Click for Alert</button>
+    </div>
+
+    <div class="container3">
+        <h1>Console Event</h1>
+        <button id="btn3">Click to print in console</button>
+    </div>
+
+    <div class="container4">
+        <h1>Key Code Event</h1>
+        <button id="btn4">Print Key and Key code</button>
+    </div>
+    
+
+
+    <script src="33 Events.js"></script>
+</body>
+</html>
