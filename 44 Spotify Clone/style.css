@@ -1,0 +1,167 @@
+*{
+    padding: 0; 
+    margin: 0;
+    /* background-color: black; */
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: black;
+}
+.container{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: row;
+}
+
+.left{
+    width: 25vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 10px;
+    
+    
+}
+
+.left .left_home{
+    background-color: #121212;
+    padding: 10px;
+    border: 2px solid #121212;
+    border-radius: 7px;
+
+}
+
+.home_logo img{
+    filter: invert(1);
+    width: 25px;
+}
+
+.home_menu li{
+    display: flex;
+    width: 20px;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.home_menu li img{
+    filter: invert(1);
+}
+
+
+/* ============================ Left Library Section ============================ */
+
+.library_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left .left_library{
+    background-color: #121212;
+    padding: 10px;
+    border: 2px solid #121212;
+    border-radius: 7px;
+    height: 70vh;
+    position: relative;
+    
+
+}
+
+.library_left{
+    display: flex;
+}
+
+.library_left img{
+    filter: invert(1);
+    width: 20px;
+    margin-right: 10px;
+}
+
+.library_bottom_links{
+    position: absolute;
+    bottom: 10px;
+}
+
+.library_bottom_links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+.library_bottom_links ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+
+
+
+/* ---------------------------- RIGHT SIDE ---------------------------- */
+
+.right{
+    width: 75vw;
+    color: white;
+    border: 2px solid white;
+    
+}
+
+.right_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #121212;
+}
+
+.right_header_arrows ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.right_header_arrows ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right_header_icon{
+    width: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+}
+
+.right_header_button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.login{
+    border: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+
+.login:hover{
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.signup{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+
+.signup:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
