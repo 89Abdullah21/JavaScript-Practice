@@ -54,8 +54,19 @@ body{
 
 .library_top{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.song_list ul{
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.song_list ul li{
+    list-style-type:decimal;
 }
 
 .left .left_library{
@@ -199,10 +210,11 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    max-height: 90vh;
+    max-height: 80vh;
     overflow-y: auto;
     overflow-x: hidden;
     /* overflow:scroll; */
+    position: relative;
 
 }
 
@@ -279,4 +291,37 @@ body{
 .song_text p{
     font-size: 12px;
     color: #afafaf
+}
+
+
+/* ============================= Right Playbar Section ============================ */
+
+.playbar{
+    /* border: 2px solid white; */
+    background-color: #429f28;
+    bottom: 0;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 auto; */
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    border-radius: 24px;
+}
+
+.song_buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.song_buttons img{
+    width: 15px;
+    
+
 }

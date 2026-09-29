@@ -1,3 +1,12 @@
-.filter{
-    filter: invert(1);
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-slider-thumb{
+    background-color: #333;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222;
 }
