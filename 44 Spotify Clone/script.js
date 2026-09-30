@@ -1,3 +1,23 @@
+// Below Steps:
+// 1) First we create a function to getSongs from the source
+// 2) In the function body, we fetch the songs from the target directory
+// 3) The response is converted to text.
+// 4) We create a temporary div element to hold the response HTML.
+// 5) Using innerHTML, we add the response to the div.
+// 6) The song links are in the anchor tags (found by checking the console), so we get all the anchor tags from the div.
+// 7) We create an empty array to hold the song links.
+// 8) To add songs to the array, we create a loop
+// 9) In the loop, we check if the href of the anchor tag ends with ".mp3" to filter out non-song links.
+// 10) If the href ends with ".mp3", we push the song link to the songs array. We use split to get only the song title after "/Songs/"
+// 11) Finally, we return the songs array
+// 12) Next, we create a function to playSongs
+// 13) In the function body, we call getSongs to get the songs from the server
+// 14) We log the songs to the console for debugging purposes
+// 15) Now in order to display the songs in our desired area/din in the site, we select the unordered list element in the song_list div to add the songs to the library list
+// 16) We create a loop to iterate through the songs array and add each song to the unordered list as a list item. We replace "%20" with a blank space in the song title for better readability.
+// 17) Next, we create an audio object and set its source to the fourth song in the songs array (index 3). We then call the play method on the audio object to start playing the song.
+// 18) We add an event listener to the audio object that listens for the "loadeddata" event. When this event is triggered, we log the duration of the audio clip, the current source, and the current time to the console for debugging purposes. We also log a message indicating the duration of the audio clip in seconds.
+
 async function getSongs() {
     let song = await fetch("http://127.0.0.1:5500/44%20Spotify%20Clone/Songs");
     let response = await song.text();
@@ -11,8 +31,8 @@ async function getSongs() {
     for (let i = 0; i < as.length; i++) {
         const element = as[i];
         if (element.href.endsWith(".mp3")) {
-            // songs.push(element.href);
-            songs.push(element.href.split("/Songs/")[1]);
+            songs.push(element.href);
+            // songs.push(element.href.split("/Songs/")[1]);
             // By split /Songs mean that return the title after the word Song. Not the full path
             // http://127.0.0.1:5500/44%20Spotify%20Clone/Songs/Faslon%20ko%20Takalluf.mp3
             // Faslon%20ko%20Takalluf.mp3 (Because of split)
@@ -31,8 +51,10 @@ async function playSongs() {
 
     // Adding songs to the library list
     let songUl = document.querySelector(".song_list").getElementsByTagName("ul")[0]
+    // console.log(songUl);
     for (const song of songs) {
-        songUl.innerHTML += `<li>${song.replaceAll("%20", " ")}</li>`;
+        let songTitle = song.split("/Songs/")[1];
+        songUl.innerHTML += `<li>${songTitle.replaceAll("%20", " ")}</li>`;
         // %20 is the blank space in the song title and we don't want it
     }
 
@@ -41,8 +63,8 @@ async function playSongs() {
 
     // Plying the songs
 
-    let audio = new Audio(songs[3]);
-    // audio.play();
+    let audio = new Audio(songs[0]);
+    audio.play();
 
     audio.addEventListener("loadeddata", () => {
         let duration = audio.duration;
