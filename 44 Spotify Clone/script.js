@@ -64,7 +64,7 @@ async function playSongs() {
     // Plying the songs
 
     let audio = new Audio(songs[0]);
-    audio.play();
+    // audio.play();
 
     audio.addEventListener("loadeddata", () => {
         let duration = audio.duration;
