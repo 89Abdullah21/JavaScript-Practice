@@ -37,7 +37,7 @@ async function getSongs() {
             // http://127.0.0.1:5500/44%20Spotify%20Clone/Songs/Faslon%20ko%20Takalluf.mp3
             // Faslon%20ko%20Takalluf.mp3 (Because of split)
 
-            
+
         }
     }
 
@@ -53,25 +53,49 @@ async function playSongs() {
     let songUl = document.querySelector(".song_list").getElementsByTagName("ul")[0]
     // console.log(songUl);
     for (const song of songs) {
-        let songTitle = song.split("/Songs/")[1];
-        songUl.innerHTML += `<li>${songTitle.replaceAll("%20", " ")}</li>`;
+        let songTitle = song.split("/Songs/")[1].split(".mp3")[0];
+        // songUl.innerHTML += `<li>${songTitle.replaceAll("%20", " ")}</li>`;  (Before: Just to print the song title in the list)
+        songUl.innerHTML += `<li>
+                                <div class="song_box">
+
+
+                                    <div class="song_info">
+                                        <img src="/44 Spotify Clone/Svgs/music.svg" alt="">
+                                        <div class="library_song_text">
+                                            <h5>${songTitle.replaceAll("%20", " ")}</h5>
+                                            <p>Abdullah</p>
+
+                                        </div>
+                                    </div>
+
+                                        <div class="play_song">
+                                            <span>Play Song</span>
+                                            <img src="/44 Spotify Clone/Svgs/play.svg" alt="">
+                                        </div>
+                                    
+                                </div>
+                            </li>`;
         // %20 is the blank space in the song title and we don't want it
     }
 
 
 
 
-    // Plying the songs
+    // // Plying the songs
 
-    let audio = new Audio(songs[0]);
-    // audio.play();
+    // let audio = new Audio(songs[0]);
+    // // audio.play();
 
-    audio.addEventListener("loadeddata", () => {
-        let duration = audio.duration;
-        console.log(audio.duration, audio.currentSrc, audio.currentTime);
-        console.log("Duration of the audio clip:", duration, "seconds");
-        // The duration variable now holds the duration (in seconds) of the audio clip
-    });
+    // audio.addEventListener("loadeddata", () => {
+    //     let duration = audio.duration;
+    //     console.log(audio.duration, audio.currentSrc, audio.currentTime);
+    //     console.log("Duration of the audio clip:", duration, "seconds");
+    //     // The duration variable now holds the duration (in seconds) of the audio clip
+    // });
+
+    // Above was the practice code to play the song and get the duration of the song. Now we will implement the play button functionality below.
+
+    
 
 }
 
