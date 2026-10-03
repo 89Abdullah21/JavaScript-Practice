@@ -115,6 +115,7 @@ body {
     list-style: none;
     margin-bottom: 15px;
     padding: 7px;
+    cursor: pointer;
 }
 
 .song_list ul {
@@ -369,12 +370,12 @@ body {
 
 .playbar {
     /* border: 2px solid white; */
-    background-color: #429f28;
+    background-color: white;
     bottom: 0;
     width: 65vw;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     /* margin: 0 auto; */
     position: fixed;
@@ -382,7 +383,7 @@ body {
     left: 60%;
     transform: translate(-50%, -50%);
     height: 65px;
-    border-radius: 24px;
+    border-radius: 14px;
 }
 
 .song_buttons {
@@ -390,6 +391,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    /* border: 2px solid red; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .song_buttons img {
@@ -399,22 +404,41 @@ body {
 }
 
 .seekbar{
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 10px;
     height: 5px;
     width: 95%;
     position: absolute;
     bottom: 5px;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
 }
 
 .circle{
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background-color: white;
+    background-color: black;
     position: relative;
     bottom: 4px;
-    left: 20%; /* Position the circle at the start of the seekbar */
+    left: 0%; /* Position the circle at the start of the seekbar */
     transition: left 0.4s; /* Smooth transition for the circle movement */
 
+}
+
+.playbar_song_info, .songtime{
+    /* border: 2px solid white; */
+    filter: invert(1);
+    padding: 0px 20px;
+}
+
+.playbar_song_info p, .songtime p{
+
+    font-family:cursive;
+}
+
+.songtime{
+    display: flex;
 }
